@@ -1,12 +1,11 @@
 <h3> Create Your Own Blog Post!</h3>
-<%= form_with url:'/blogs', local: true do |form| %>
+<%= form_with url:"/blogs", local: true do %>
 
-    <%= form.label :title %>
-    <%= form.text_field :title %>
+    <label for="title">Title:</label>
+    <input id="title" name="blog[title]">
+    <label for="content">Content:</label>
+    <input id="content" name="blog[content]">
 
-    <%= form.label :content %>
-    <%= form.text_field :content %>
-
-    <%= form.submit %>
+    <input type="submit" value="Create Blog">
 
     <% end %>
